@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
+/* HELPERS */
+@import './helpers/functions';
+@import './helpers/normalize';
+@import './helpers/mixins';
+
+/* COMPONENTS */
+@import './components/title-text';
+@import './components/services-card';
+@import './components/rooms-card';
+@import './components/customers-card.scss';
+@import './components/the-header';
+@import './components/form-contact';
+@import './layouts/hero-layout';
+@import './layouts/services-layout';
+@import './layouts/rooms-layout';
+@import './layouts/customers-layout';
+@import './components/the-footer';

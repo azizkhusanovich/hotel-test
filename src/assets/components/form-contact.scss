@@ -1,0 +1,83 @@
+.form-wrapper {
+    background: $cl_blue;
+    border-radius: 10px;
+    padding: 60px 0;
+    row-gap: 60px;
+    transform: translateY(20%);
+
+    @include md {
+        padding: 30px 0;
+        row-gap: 30px;
+    }
+
+    .gen-title {
+        padding: 0 !important;
+    }
+
+    .form {
+        @include df-between;
+        width: clamp(260px, 60%, 556px);
+        margin: 0 auto;
+        border-radius: 10px;
+
+
+
+
+        @include md {
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .inp {
+            width: 70%;
+            position: relative;
+            background: $cl_white;
+            border-radius: 10px;
+
+            &.valid {
+                border: 2px solid green;
+            }
+
+            &.invalid {
+                border: 2px solid red;
+            }
+
+            @include md {
+                width: 100%;
+            }
+
+            .input {
+                width: 90%;
+                padding: 18px;
+                border: none;
+                border-radius: 10px;
+
+            }
+
+            .email-icon {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: $cl_gray;
+                font-size: 20px;
+            }
+        }
+
+
+        .btn {
+            font-size: rem(16);
+            line-height: lh(27, 16);
+            padding: toEm(15, 18) toEm(22, 18);
+            border-radius: 10px;
+            color: $cl_white;
+            background: $cl_yellow;
+            cursor: pointer;
+
+            @include md {
+                margin-top: 10px;
+                font-size: rem(12);
+            }
+        }
+    }
+}

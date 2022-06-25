@@ -1,0 +1,210 @@
+.header {
+  width: 100%;
+  background: linear-gradient(180deg, #F0F5F5 0%, rgba(240, 245, 245, 0) 100%);
+
+  @include md {
+    position: fixed;
+    z-index: 999;
+    background: $cl_white;
+    box-shadow: 0 0 5px $cl_yellow,
+      0 0 8px $cl_yellow,
+      0 0 10px $cl_yellow;
+  }
+
+  .nav {
+    @include df-between;
+    padding: rem(42) 0;
+
+    @include md {
+      padding: 0;
+    }
+
+    .logo {
+      font-family: 'Poppins';
+      font-weight: 500;
+      font-size: rem(24);
+      line-height: lh(36, 24);
+      color: $cl_black;
+
+      @include md {
+        padding: rem(22) 0;
+      }
+    }
+
+    .info {
+      width: 85%;
+      @include df-between;
+
+      @include md {
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+        height: 100%;
+        background: $cl_yellow;
+        padding: rem(42) 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        row-gap: 10px;
+        transform: translate(100%);
+        transition: 500ms;
+        overflow: auto
+      }
+
+      .menu {
+        @include df-between;
+        column-gap: rem(48);
+
+        @include md {
+          flex-direction: column;
+          row-gap: 10px;
+        }
+
+        .link {
+          font-family: 'Poppins';
+          font-size: rem(16);
+          line-height: lh(21, 16);
+          color: $cl_black;
+          position: relative;
+
+          &::after {
+            content: '';
+            width: 0;
+            height: 2px;
+            background: $cl_yellow;
+            transition: 500ms;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+
+            @include md {
+              background: $cl_white;
+            }
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+
+          @include md {
+            color: $cl_white;
+          }
+
+        }
+      }
+
+      .registrate {
+        @include df-between;
+        width: clamp(160px, 25%, 190px);
+
+        @include md {
+          flex-direction: column;
+          row-gap: 10px;
+        }
+
+        .log-btn {
+          font-family: 'Poppins';
+          font-size: rem(16);
+          line-height: lh(21, 16);
+          color: $cl_black;
+          position: relative;
+
+          &::after {
+            content: '';
+            width: 0;
+            height: 2px;
+            background: $cl_yellow;
+            transition: 500ms;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+
+          @include md {
+            color: $cl_white;
+          }
+        }
+
+        .sign-btn {
+          font-family: 'Poppins';
+          font-size: rem(14);
+          line-height: lh(21, 14);
+          color: $cl_white;
+          padding: toEm(10, 14) toEm(25, 14);
+          background: $cl_yellow;
+          border-radius: 6px;
+          border: 2px solid transparent;
+          transition: 500ms;
+
+          &:hover {
+            border: 2px solid $cl_yellow;
+            color: $cl_yellow;
+            background: transparent;
+
+            @include md {
+              color: $cl_white;
+              border: 2px solid $cl_white;
+              color: $cl_white;
+            }
+          }
+
+          @include md {
+            color: $cl_yellow;
+            border: 2px solid $cl_white;
+            background: $cl_white;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .burger {
+      width: 35px;
+      height: 25px;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
+      right: 15px;
+      z-index: 999;
+
+      @include md {
+        display: flex;
+      }
+
+      span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: $cl_yellow;
+        border-radius: 10px;
+        transition: 500ms;
+      }
+    }
+
+    &.open .burger span {
+      background: $cl_white;
+    }
+
+    &.open .burger span:nth-child(1) {
+      transform: rotate(45deg) translate(0, 15px);
+    }
+
+    &.open .burger span:nth-child(2) {
+      transform: translate(-100px);
+      opacity: 0;
+    }
+
+    &.open .burger span:nth-child(3) {
+      transform: rotate(-45deg) translate(0, -15px);
+    }
+
+    &.open .info {
+      transform: translate(0);
+    }
+  }
+}

@@ -1,0 +1,126 @@
+.footer {
+  background: $cl_darkblue;
+
+  .top {
+    padding: rem(100) 0;
+    border-bottom: 1px solid $cl_white-op;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include md {
+      gap: 30px 20px;
+      padding: rem(50) 0;
+    }
+
+
+
+    .main {
+      flex: 0 1 35%;
+
+      @include md {
+        flex: 1 1 47%;
+      }
+
+
+      @include media(rem(425)) {
+        text-align: center;
+      }
+
+      .title {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: rem(24);
+        line-height: lh(27, 24);
+        color: $cl_white;
+        margin-bottom: 18px;
+      }
+
+      .text {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(18);
+        line-height: lh(21, 18);
+        padding-bottom: toEm(30, 18);
+        color: $cl_white-op;
+      }
+
+      .links {
+        display: flex;
+        column-gap: 30px;
+
+        .link {
+          font-size: 22px;
+          color: $cl_white;
+        }
+
+        @include media(rem(425)) {
+          justify-content: center;
+        }
+
+      }
+    }
+
+    .little {
+      flex: 0 1 15%;
+
+      @include md {
+        flex: 1 1 47%;
+      }
+
+      @include media(rem(425)) {
+        text-align: center;
+      }
+
+      .title {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: rem(21);
+        line-height: lh(24, 21);
+        color: $cl_white;
+        margin-bottom: 18px;
+      }
+
+      .menu {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+
+        .list {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: rem(16);
+          line-height: lh(18, 16);
+          color: $cl_white-op;
+          transition: 500ms;
+          cursor: pointer;
+
+          &:hover {
+            color: $cl_white;
+            user-select: none;
+          }
+        }
+      }
+
+    }
+
+
+  }
+
+  .bottom {
+    .copy {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(14);
+      line-height: lh(16, 14);
+      padding: toEm(40, 14) 0 toEm(25, 14);
+      color: $cl_white-op;
+      text-align: center;
+    }
+  }
+}

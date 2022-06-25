@@ -1,0 +1,14 @@
+.blog {
+    .wrapper {
+        @include df-between;
+        flex-wrap: wrap;
+        align-items: stretch;
+        padding: 80px 0;
+        gap: 25px;
+
+        @include md {
+            padding: 40px 0;
+            gap: 15px;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.gen-title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: rem(48);
+    line-height: 165%;
+    text-align: center;
+    color: $cl_black;
+    padding: 120px 0 12px;
+
+    @include lg {
+        font-size: rem(40);
+        padding-top: 80px;
+    }
+
+    @include md {
+        font-size: rem(36);
+        padding-top: 60px;
+    }
+
+    @include sm {
+        font-size: rem(27);
+        padding-top: 30px;
+    }
+}
+
+.gen-subtitle {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(18);
+    text-align: center;
+    line-height: 165%;
+    color: $cl_gray;
+
+    @include md {
+        font-size: rem(15);
+    }
+}
